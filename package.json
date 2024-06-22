@@ -1,0 +1,16 @@
+{
+  "name": "vercl",
+  "version": "0.0.0",
+  "author": "@bfzli",
+  "license": "MIT",
+  "description": "Vercl simplifies the way to interact with the Vercel API as an SDK 🔥",
+  "keywords": [
+    "Vercel",
+    "Vercel API",
+    "Vercl",
+    "Vercel Docs",
+    "Vercel Documentation",
+    "Learn Vercel",
+    "Vercel SDK"
+  ]
+}

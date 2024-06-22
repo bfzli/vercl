@@ -1,0 +1,20 @@
+{
+  "acess-groups": "Access Groups",
+  "aliasses": "Aliasses",
+  "artifacts": "Artifacts",
+  "authentication": "Authentication",
+  "certs": "Certs",
+  "cheks": "Cheks",
+  "deplyments": "Deplyments",
+  "dns": "Dns",
+  "domains": "Domains",
+  "edge-config": "Edge Config",
+  "integrations": "Integrations",
+  "log-drains": "Log Drains",
+  "project-members": "Project Members",
+  "projects": "Projects",
+  "secrets": "Secrets",
+  "teams": "Teams",
+  "user": "User",
+  "webhooks": "Webhooks"
+}

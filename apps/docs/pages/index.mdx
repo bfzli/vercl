@@ -1,0 +1,37 @@
+# Vercl
+
+**Vercl** is a wrapper for the Vercel API and not a real SDK, but we're going to refer to it as an SDK because of its similarities to help people understand the idea.
+
+It allows interaction with the Vercel API in a more structured way, including TypeScript types, simplified methods, and similar utilities for a better, more scalable Vercel experience.
+
+**Vercl** is not an official SDK from Vercel but a community-built one that is open source and free to use. It is also open to contributions from others.
+
+
+## How It Started
+
+Vercel is a great platform offering numerous features. However, its REST API isn't the easiest or most structured to use. Therefore, we developed a wrapper to simplify interaction with it, addressing the community's need for a more intuitive approach to leveraging the Vercel REST API.
+
+## Future
+
+We are working hard to incorporate all existing methods into the SDK and more. Additionally, we plan to introduce support for additional languages such as Python and Go in the near future.
+
+---
+
+### Example
+
+Here's how simple it is to purchase a domain with **Vercl** and gain control over all aspects. For example, this method will purchase the domain for `example.com` on your Vercel account and set auto-renewal to true.
+
+```ts filename="HandlePurchaseDomain.ts"
+import { PurchaseDomain } from '@vercl/sdk'
+
+const HandlePurchaseDomain = async () => {
+    const { success, code, message } = await PurchaseDomain({
+        domain: 'example.com',
+        renew: true,
+    })
+    
+    // Handle as you wish
+}
+
+export default HandlePurchaseDomain
+```

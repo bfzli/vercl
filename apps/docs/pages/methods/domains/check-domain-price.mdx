@@ -1,0 +1,15 @@
+
+# Create DNS Record
+
+Check any given domain for the purchasable price on Vercel. 
+
+```ts filename="HandleCheckDomainPrice.ts"
+import { CheckDomainPrice } from '@vercl/sdk'
+
+const HandleCheckDomainPrice = async () => {
+    const { success, code, message } = await CheckDomainPrice({
+        domain: 'example.com', 
+        type: 'new'
+    })
+}
+```

@@ -1,0 +1,15 @@
+
+# Create DNS Record
+
+Purchase a domain on your Vercel account using your billing information.
+
+```ts filename="HandlePurchaseDomain.ts"
+import { PurchaseDomain } from '@vercl/sdk'
+
+const HandlePurchaseDomain = async () => {
+    const { success, code, message } = await PurchaseDomain({
+        domain: 'example.com', 
+        renew: true
+    })
+}
+```

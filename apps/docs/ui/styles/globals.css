@@ -1,0 +1,7 @@
+:root {
+    --nextra-primary-hue: 30deg !important
+}
+
+:is(html[class~=dark] pre.dark\:nx-bg-primary-300\/10){
+    background-color: #1C2428 !important;
+}

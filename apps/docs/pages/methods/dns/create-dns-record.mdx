@@ -1,0 +1,19 @@
+
+# Create DNS Record
+
+This method allows you to create a DNS record for a domain on your Vercel account. This works only on the added domains in your Vercel account.
+
+```ts filename="HandleCreateDNSRecord.ts"
+import { CreateDNSRecord } from '@vercl/sdk'
+
+const HandleCreateDNSRecord = async () => {
+    const { success, code, message } = await CreateDNSRecord({
+        domain: 'example.com',
+        name: 'www',
+        type: 'CNAME',
+        ttl: 3600,
+        value: 'vercel.com',
+        comment: 'This is a test record for www.example.com'
+    })
+}
+```

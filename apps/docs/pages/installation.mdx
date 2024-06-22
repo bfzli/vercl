@@ -1,0 +1,55 @@
+import { Tabs } from 'nextra/components'
+
+# Installing
+ 
+The SDK is available in most package managers. It is lightweight and is built on top of no dependencies, but rather only the core native APIs.
+
+<Tabs items={['Npm', 'Pnpm', 'Yarn', 'Bun']}>
+  <Tabs.Tab>
+    ```bash
+    npm install @vercl/sdk
+    ```
+  </Tabs.Tab>
+
+  <Tabs.Tab>
+    ```bash
+    pnpm install @vercl/sdk
+    ```
+  </Tabs.Tab>
+
+  <Tabs.Tab>
+    ```bash
+    yarn add @vercl/sdk
+    ```
+  </Tabs.Tab>
+
+  <Tabs.Tab>
+    ```bash
+    bun add @vercl/sdk
+    ```
+  </Tabs.Tab>
+</Tabs>
+
+## The Concept
+
+We need to initialize the configurations of the Vercel account once when the server starts. After that, the methods will work according to the initialized config of that account whenever called anywhere in the app.
+
+The SDK can only be used on the server side as it contains sensitive keys of the Vercel account. Therefore, we strictly show an error message if it's called on the client side.
+
+After the initialization happens, it will not reset until the server starts or restarts. Calling it again won't re-initialize or replace the old configs. Therefore, we recommend placing it outside any function to ensure it is called only once.
+
+```ts filename="Api.ts"
+import { InitializeConfigs } from '@vercl/sdk'
+
+const { 
+    VERCEL_TOKEN, 
+    VERCEL_TEAM_ID, 
+    VERCEL_PROJECT_ID 
+} = process.env
+
+InitializeConfigs({
+  token: VERCEL_TOKEN,
+  teamId: VERCEL_TEAM_ID,
+  projectId: VERCEL_PROJECT_ID
+})
+```
