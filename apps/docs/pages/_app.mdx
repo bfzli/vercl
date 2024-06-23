@@ -1,12 +1,10 @@
 import Script from 'next/script'
 
-import { Fragment } from 'react'
-
 import '../ui/styles/globals.css'
 
 export default function Vercl({ Component, pageProps }) {
     return (
-        <Fragment>
+        <>
             <style jsx global>
                 {`
                     @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
@@ -53,7 +51,6 @@ export default function Vercl({ Component, pageProps }) {
             </head>
 
             <Component {...pageProps} />
-        <Fragment />
+        </>
     )
-
 }
