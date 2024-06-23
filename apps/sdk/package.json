@@ -1,0 +1,36 @@
+{
+    "name": "sdk",
+    "version": "1.0.0",
+    "type": "module",
+    "main": "ok/index.js",
+    "module": "ok/index.es.js",
+    "files": [
+        "ok"
+    ],
+    "scripts": {
+        "build": "rimraf ./package && eslint . --ext .js,.ts --config .eslintrc.json && npx rollup -c && cp -R ./build/* ./package",
+        "dev": "eslint . --ext .js,.ts --config .eslintrc.json  && npx rollup -c -w",
+        "lint": "eslint . --ext .js,.ts --config .eslintrc.json",
+        "knip": "knip",
+        "unimported": "unimported"
+    },
+    "devDependencies": {
+        "@rollup/plugin-alias": "^5.1.0",
+        "@rollup/plugin-commonjs": "^26.0.1",
+        "@rollup/plugin-node-resolve": "^15.2.3",
+        "@rollup/plugin-typescript": "^11.1.6",
+        "@typescript-eslint/eslint-plugin": "^7.13.1",
+        "@typescript-eslint/parser": "^7.13.1",
+        "eslint": "^8.52.0",
+        "knip": "^5.22.2",
+        "postcss": "^8.4.38",
+        "rollup": "^4.18.0",
+        "rollup-plugin-dts": "^6.1.1",
+        "rollup-plugin-postcss": "^4.0.2",
+        "rollup-plugin-typescript2": "^0.36.0",
+        "rollup-plugin-visualizer": "^5.12.0",
+        "tslib": "^2.6.3",
+        "typescript": "^5.5.2",
+        "unimported": "^1.31.1"
+    }
+}
