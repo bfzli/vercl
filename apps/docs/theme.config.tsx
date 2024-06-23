@@ -10,21 +10,21 @@ const config: DocsThemeConfig = {
         <link rel='icon' type='image/x-icon' href='/favicon.ico' />
 
         <title>
-            Vercl Documentation
+            Vercl - A Vercel API SDK
         </title>
 
-        <meta property='og:title' content='Vercl Documentation' />
+        <meta property='og:title' content='Vercl - A Vercel API SDK' />
         <meta property='og:type' content='website' />
         <meta property='og:url' content='https://vercl.bfzli.com' />
-        <meta property='og:site_name' content='Vercel' />
+        <meta property='og:site_name' content='Vercl' />
         <meta property='og:locale' content='en_US' />
 
         <meta name='description' content='Vercl simplifies the way to interact with the Vercel API as an SDK 🔥'/>
         <meta property='og:description' content='Vercl simplifies the way to interact with the Vercel API as an SDK 🔥'/>
         <meta name='twitter:description' content='Vercl simplifies the way to interact with the Vercel API as an SDK 🔥' />
 
-        <meta name='twitter:image' content='https://vercl.bfzli.com/assets/og_thumbnail.jpg' />
-        <meta property='og:image' content='https://vercl.bfzli.com/assets/og_thumbnail.jpg' />
+        <meta name='twitter:image' content='https://vercl.bfzli.com/assets/og_thumbnail.png' />
+        <meta property='og:image' content='https://vercl.bfzli.com/assets/og_thumbnail.png' />
       </>
     )
   },
